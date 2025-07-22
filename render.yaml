@@ -14,4 +14,4 @@ services:
         value: "H4ck3r"
       - key: N8N_BASIC_AUTH_PASSWORD
         value: "n8n_deploy12345$$"
-    port: 5555
+    port: 5678
