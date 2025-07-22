@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: n8n
+    env: node
+    plan: free
+    buildCommand: "npm install n8n -g"
+    startCommand: "n8n"
+    envVars:
+      - key: DB_TYPE
+        value: sqlite
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: "H4ck3r"
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: "n8n_deploy12345$$"
+    port: 5678
