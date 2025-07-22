@@ -8,10 +8,30 @@ services:
     envVars:
       - key: DB_TYPE
         value: sqlite
+      - key: N8N_DIAGNOSTICS_ENABLED
+        value: "false"
+      - key: N8N_VERSION_NOTIFICATIONS_ENABLED
+        value: "false"
+      - key: N8N_HIRING_BANNER_ENABLED
+        value: "false"
+      - key: N8N_EDITOR_BASE_URL
+        value: "https://n8n-deploy-2mg1.onrender.com"
+      - key: N8N_PROTOCOL
+        value: "https"
+      - key: WEBHOOK_URL
+        value: "https://n8n-deploy-2mg1.onrender.com"
+      - key: GENERIC_TIMEZONE
+        value: "Asia/Kolkata"
+      - key: N8N_DISABLE_PRODUCTION_MAIN_MENU
+        value: "true"
+      - key: N8N_AUTH_EXCLUDE_ENDPOINTS
+        value: "healthz"
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
       - key: N8N_BASIC_AUTH_USER
         value: "H4ck3r"
       - key: N8N_BASIC_AUTH_PASSWORD
         value: "n8n_deploy12345$$"
+      - key: N8N_AUTHENTICATION
+        value: "basic"
     port: 5678
