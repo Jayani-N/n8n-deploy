@@ -34,4 +34,7 @@ services:
         value: "n8n_deploy12345$$"
       - key: N8N_AUTHENTICATION
         value: "basic"
+      - key: N8N_USER_MANAGEMENT_DISABLED
+        value: "true"
+
     port: 5678
