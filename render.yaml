@@ -4,7 +4,7 @@ services:
     env: node
     plan: free
     buildCommand: "npm install n8n -g"
-    startCommand: "n8n"
+    startCommand: "n8n start --port=5678 --host=0.0.0.0"
     envVars:
       - key: DB_TYPE
         value: sqlite
@@ -15,7 +15,7 @@ services:
       - key: N8N_HIRING_BANNER_ENABLED
         value: "false"
       - key: N8N_EDITOR_BASE_URL
-        value: "https://n8n-deploy-2mg1.onrender.com"  # Replace with your final Render URL
+        value: "https://n8n-deploy-2mg1.onrender.com"
       - key: WEBHOOK_URL
         value: "https://n8n-deploy-2mg1.onrender.com"
       - key: N8N_PROTOCOL
@@ -33,4 +33,3 @@ services:
       - key: N8N_USER_MANAGEMENT_DISABLED
         value: "true"
     port: 5678
-
