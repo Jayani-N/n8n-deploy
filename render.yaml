@@ -4,7 +4,7 @@ services:
     env: node
     plan: free
     buildCommand: "npm install n8n -g"
-    startCommand: "n8n start --port=5678 --host=0.0.0.0"
+    startCommand: "n8n start --data-folder /opt/render/.n8n-clean --port=5678 --host=0.0.0.0"
     envVars:
       - key: DB_TYPE
         value: sqlite
@@ -32,4 +32,6 @@ services:
         value: "basic"
       - key: N8N_USER_MANAGEMENT_DISABLED
         value: "true"
+      - key: N8N_DATA_FOLDER
+        value: "/opt/render/.n8n-clean"
     port: 5678
